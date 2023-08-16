@@ -15,29 +15,29 @@ result = row * column;
 
 if (column == 0)
 {
-putchar('0');
+_putchar('0');
 }
 else if (result < 10)
 {
-putchar(' ');
-putchar(' ');
-putchar(result + '0');
+_putchar(' ');
+_putchar(' ');
+_putchar(result + '0');
 }
 else
 {
-putchar(' ');
-putchar((result / 10) + '0');
-putchar((result % 10) + '0');
+_putchar(' ');
+_putchar((result / 10) + '0');
+_putchar((result % 10) + '0');
 }
 
 if (column < 9)
 {
-putchar(',');
-putchar(' ');
+_putchar(',');
+_putchar(' ');
 }
 }
 
-putchar('\n');
+_putchar('\n');
 }
 }
 
