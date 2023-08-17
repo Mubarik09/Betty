@@ -12,32 +12,9 @@ for (row = 0; row <= 9; row++)
 for (column = 0; column <= 9; column++)
 {
 result = row * column;
-
-if (column == 0)
-{
-_putchar('0');
-}
-else if (result < 10)
-{
-_putchar(' ');
-_putchar(' ');
-_putchar(result + '0');
-}
-else
-{
-_putchar(' ');
-_putchar((result / 10) + '0');
-_putchar((result % 10) + '0');
-}
-
-if (column < 9)
-{
-_putchar(',');
-_putchar(' ');
+printf("%d", result);
 }
 }
-
-_putchar('\n');
-}
+printf("\n");
 }
 
