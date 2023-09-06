@@ -6,6 +6,7 @@
  */
 void _puts(char *str)
 {
-puts("\"Programming is like building a multilingual puzzle");
+if (str != NULL)
+puts(str);
 }
 
