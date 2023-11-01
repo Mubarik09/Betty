@@ -39,11 +39,11 @@ return (NULL);
 }
 if (s1 == NULL)
 {
-s1 = " ";
+s1 = "";
 }
 if (s2 == NULL)
 {
-s2 = " ";
+s2 = "";
 }
 for (i = 0; i < len(s1); i++)
 {
