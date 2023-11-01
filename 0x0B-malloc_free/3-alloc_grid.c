@@ -20,6 +20,7 @@ return (NULL);
 if (grid == NULL)
 {
 return (NULL);
+
 }
 
 for (i = 0; i < height; i++)
