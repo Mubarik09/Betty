@@ -1,3 +1,20 @@
+
+/**
+ * length - function to find string length
+ * @c: pointer to the string
+ * Return: Return the length of the string
+ */
+int length(char *c)
+{
+int len = 0;
+while (*c != '\0')
+{
+len++;
+c++;
+}
+return (len);
+}
+
 #include "main.h"
 #include <stdlib.h>
 /**
@@ -11,21 +28,11 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int length1 = 0;
-unsigned int length2 = 0;
+unsigned int length1 = length(s1);
+unsigned int length2 = length(s2);
 unsigned int i = 0;
 char *array;
-unsigned int j = 1;
-while (*s1 != '\0')
-{
-length1++;
-s1++;
-}
-while (*s2 != '\0')
-{
-length2++;
-s2++;
-}
+unsigned int j = 0;
 
 if (n >= length2)
 {
@@ -45,15 +52,18 @@ if (array == NULL)
 {
 return (NULL);
 }
-for (i = 0; i < length1; i++)
+while (i < length1)
 {
 array[i] = s1[i];
+i++;
 }
 
-for (j = 0; j < n + 1; j++)
+while (j < n)
 {
 array[length1 + j] = s2[j];
+j++;
 }
+array[length1 + n] = '\0';
 return (array);
 }
 

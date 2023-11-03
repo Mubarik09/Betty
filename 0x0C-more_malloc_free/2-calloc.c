@@ -10,7 +10,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-int *array = malloc(size * nmemb * sizeof(*array));
+void *array = malloc(size * nmemb);
 unsigned int i = 0;
 if (array == NULL)
 {
@@ -23,7 +23,7 @@ return (NULL);
 
 for (i = 0; i < nmemb * size; i++)
 {
-array[i] = 0;
+((char *)array)[i] = 0;
 }
 return (array);
 }

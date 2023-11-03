@@ -15,7 +15,7 @@ if (min > max)
 {
 return (NULL);
 }
-if (ptr == 0)
+if (ptr == NULL)
 {
 return (NULL);
 }
