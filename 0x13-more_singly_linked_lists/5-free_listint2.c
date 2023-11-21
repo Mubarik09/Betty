@@ -12,20 +12,11 @@ if (*head == NULL)
 {
 return;
 }
-else if ((*head)->next == NULL)
-{
-free(*head);
-return;
-}
-else
-{
 while (*head != NULL)
 {
-*head = (*head)->next;
-free(temp);
-temp = *head;
+temp = (*head)->next;
+free(*head);
+*head = temp;
 }
-free(temp);
 *head = NULL;
-}
 }
