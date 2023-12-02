@@ -13,7 +13,7 @@ int fp;
 char *ptr;
 if (filename == NULL)
 return (-1);
-fp = open(filename, O_CREAT | O_WRONLY, 0600);
+fp = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 if (fp == -1)
 return (-1);
 if (text_content == NULL)
